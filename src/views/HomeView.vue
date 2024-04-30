@@ -470,8 +470,7 @@ function deletemultiselected() {
   localStorage.setItem('items', JSON.stringify(items.value))
   if (itemsSelected.value.length === 1) {
     const person = itemsSelected.value
-    const val = person.map((objs) => objs.id)
-    //const savedValues = items.value
+    const val = person.map((objs) => objs.id) 
 
     const personid = items.value.findIndex((item) => !val.includes(item.id))
     const applicant = savedValues[personid].username
