@@ -78,7 +78,7 @@
       v-if="isEditing"
     >
       <div class="animate__animated animate__backInUp">
-        <form @submit.prevent="submitEdit" class="bg-white h-full space-y-10 p-10">
+        <div class="bg-white h-full space-y-10 p-10">
           <div class=" ">
             <div class=" ">
               <label for="Username" class="block text-sm font-medium leading-6 text-gray-900"
@@ -153,13 +153,14 @@
               Cancel
             </button>
             <button
+              @click.prevent="submitEdit"
               type="submit"
               class="rounded-md bg-indigo-600 px-14 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Save
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </div>
     <div
@@ -492,6 +493,8 @@ function deleteMultiple() {
   displaydeletemodal2.value = !displaydeletemodal2.value
 }
 function submitEdit() {
+  editItem.preventDefault()
+
   isEditing.value = false
   const item = items.value.find((item: { id: any }) => item.id === editingItem.id)
   const newItem = {
