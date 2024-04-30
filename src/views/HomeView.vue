@@ -383,7 +383,6 @@ function reset() {
 watch(search, (newValue) => {
   if (newValue.length === 0) {
     items.value = snackbar.getpersons
-    // Reset items when search is cleared
   } else {
     initialize
 
@@ -509,15 +508,7 @@ function submitEdit() {
   localStorage.setItem('items', JSON.stringify(storedValues))
 
   snackbar.showsnackbar(true, 'success', `${person} successfully updated`)
-  // } else {
-  //   let storedValues = JSON.parse(localStorage.getItem('items')) || []
 
-  //   const index = storedValues.findIndex((item) => item.id === value)
-
-  //   const person = storedValues[index].username
-
-  //   snackbarstore.showSnackbar('success', 'success', true, `${person} successfully updated`)
-  // }
   isEditing.value = false
 }
 </script>

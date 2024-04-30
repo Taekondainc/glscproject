@@ -137,7 +137,7 @@ export default {
       cardshow: '',
       showModal: false,
       showModalloader: false,
-      persons: [] // Initialize persons array here
+      persons: []  
     }
   },
 

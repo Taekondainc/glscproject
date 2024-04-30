@@ -23,7 +23,6 @@
             </router-link>
           </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
       </header>
 
       <router-view />
@@ -48,7 +47,6 @@ import { snackbarStore } from './store/snackbarStore'
 
 const loadingModal = ref(true)
 const snackbars = snackbarStore()
-// const state = ref(false)
 onMounted(() => snackbars.showsnackbar(true, 'loaded', 'Page loaded !!!'))
 setTimeout(() => {
   loadingModal.value = false

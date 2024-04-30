@@ -149,7 +149,7 @@
 <script setup>
 import { ref } from 'vue'
 import { snackbarStore } from '@/store/snackbarStore.ts'
-// Define reactive data
+ 
 const username = ref('')
 const name = ref('')
 const email = ref('')
