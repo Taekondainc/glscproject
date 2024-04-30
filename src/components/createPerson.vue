@@ -165,7 +165,6 @@ const websiteErrors = ref([])
 const emailErrors = ref([])
 
 function checkErrors() {
-  console.log('Checking')
   const hasEmptyFields = !(
     username.value.trim() &&
     name.value.trim() &&

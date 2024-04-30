@@ -423,7 +423,6 @@ const displaydeletemodal = ref(false)
 const deleteid = ref()
 function deletemodal() {
   const val = deleteid.value
-  console.log(val)
 
   const storedValues = items.value.filter((item) => item.id == val)
   const storedValued = items.value.filter((item) => item.id !== val)
@@ -432,7 +431,6 @@ function deletemodal() {
 
   const storeindex = storedValues.findIndex((vale) => val === vale.id)
 
-  console.log(storeindex)
   if (storeindex !== -1) {
     const person = storedValues[storeindex].username
     snackbar.showsnackbar(true, 'success', `Successfully deleted ${person}`)
@@ -441,7 +439,7 @@ function deletemodal() {
   }
 
   localStorage.setItem('items', JSON.stringify(storedValued))
-  this.displaydeletemodal = !this.displaydeletemodal
+  displaydeletemodal.value = !displaydeletemodal.value
 }
 const storename = ref()
 function deleteItem(val: Item) {
