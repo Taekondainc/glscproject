@@ -153,7 +153,7 @@
               Cancel
             </button>
             <button
-              @click.prevent="submitEdit"
+              @click="submitEdit"
               type="submit"
               class="rounded-md bg-indigo-600 px-14 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
@@ -492,8 +492,7 @@ function deleteMultiple() {
   deletenames.value = name[0]
   displaydeletemodal2.value = !displaydeletemodal2.value
 }
-function submitEdit() {
-  editItem.preventDefault()
+function submitEdit() { 
 
   isEditing.value = false
   const item = items.value.find((item: { id: any }) => item.id === editingItem.id)
