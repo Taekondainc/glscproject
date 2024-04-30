@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-## git clone `https://github.com/taekondainc/glsc.git`
+## git clone `https://github.com/Taekondainc/glscproject.git`
 
-## cd my-vite-app
+## cd glscproject
 
 ## npm install
 
