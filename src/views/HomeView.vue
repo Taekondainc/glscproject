@@ -491,7 +491,6 @@ function deleteMultiple() {
   displaydeletemodal2.value = !displaydeletemodal2.value
 }
 function submitEdit() {
-  isEditing.value = false
   const item = items.value.find((item: { id: any }) => item.id === editingItem.id)
   const newItem = {
     name: editingItem.name,
@@ -519,7 +518,7 @@ function submitEdit() {
 
   //   snackbarstore.showSnackbar('success', 'success', true, `${person} successfully updated`)
   // }
-  close()
+  isEditing.value = false
 }
 </script>
 
