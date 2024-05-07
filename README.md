@@ -11,4 +11,5 @@
 ## npm run dev
 
 ## This will start the development server at `http://localhost:5173`
-![image](https://github.com/Taekondainc/glscproject/assets/46072451/c184d17c-75b0-4743-b3b4-93093df9cd70)
+![image](https://github.com/Taekondainc/glscproject/assets/46072451/cce0482d-e11d-4a43-bbfd-890f354edf82)
+
